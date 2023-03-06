@@ -1,25 +1,50 @@
-import logo from './logo.svg';
-import './App.css';
+import { useReducer, useState } from "react";
+import AddTask from "./AddTask.js";
+import Header from "./Header.js";
+import SearchBar from "./SearchBar.js";
+import TaskList from "./TaskList.js";
+import tasksReducer from "./tasksReducer.js";
 
-function App() {
+const App = () => {
+  function deleteTask(task) {
+    dispatch({ type: "delete", id: task.id });
+  }
+
+  function addTask(text) {
+    dispatch({ type: "add", id: newTaskId, text: text });
+    setNewTaskId(newTaskId + 1);
+  }
+
+  function toggleTask(task) {
+    dispatch({ type: "toggle", id: task.id });
+  }
+
+  const [newTaskId, setNewTaskId] = useState(4);
+  const [tasks, dispatch] = useReducer(tasksReducer, [
+    {
+      id: 0,
+      text: "Go to the gym Go to the gym Go to the gyGo to the gymGo to the gymGo to the gymGo to the gymm GGo to the gymo to the gym Go to the gymGo to the gymGo to the gymGo to the gymGo to the gymGo to the gym",
+      isDone: false,
+    },
+    { id: 1, text: "Play the videogames", isDone: false },
+    { id: 2, text: "Walk the dog", isDone: false },
+    {
+      id: 3,
+      text: "Read the book by Hunter Stockton Thompson about the American Dream",
+      isDone: false,
+    },
+  ]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      <main className="content">
+        <SearchBar />
+        <TaskList tasks={tasks} />
+        <AddTask addTaskHandler={addTask} />
+      </main>
+    </>
   );
-}
+};
 
 export default App;

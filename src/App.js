@@ -4,6 +4,7 @@ import Header from "./Header.js";
 import SearchBar from "./SearchBar.js";
 import TaskList from "./TaskList.js";
 import tasksReducer from "./tasksReducer.js";
+import Context from "./Context.js";
 
 const App = () => {
   function deleteTask(task) {
@@ -39,9 +40,11 @@ const App = () => {
     <>
       <Header />
       <main className="content">
-        <SearchBar />
-        <TaskList tasks={tasks} />
-        <AddTask addTaskHandler={addTask} />
+        <Context.Provider value={tasks}>
+          <SearchBar />
+          <TaskList handleDelete={deleteTask} handleToggle={toggleTask} />
+          <AddTask addTaskHandler={addTask} />
+        </Context.Provider>
       </main>
     </>
   );

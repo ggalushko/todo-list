@@ -15,6 +15,7 @@ const AddTask = ({ addTaskHandler }) => {
       }}
     >
       <input
+      placeholder="Enter task text"
         type="text"
         className={inputIsHidden? "add-task__input visible" : "add-task__input"}
         value={inputValue}

@@ -8,6 +8,13 @@ const TaskList = ({ handleDelete, handleToggle, searchInput }) => {
     task.text.toLowerCase().includes(searchInput.toLowerCase())
   );
 
+  if (tasks.length === 0)
+    return (
+      <p className="task-list__not-found">
+        You don't any tasks <br></br>Click the plus button below to add one
+      </p>
+    );
+
   return searchedTasks.length > 0 ? (
     <ul className="task-list">
       {searchedTasks.map((task) => (
@@ -20,7 +27,7 @@ const TaskList = ({ handleDelete, handleToggle, searchInput }) => {
       ))}
     </ul>
   ) : (
-    <p className="task-list__not-found"> Nothing found 😔 </p> 
+    <p className="task-list__not-found"> Nothing found 😔 </p>
   );
 };
 

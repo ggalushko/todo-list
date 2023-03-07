@@ -2,6 +2,7 @@ const SearchBar = ({ searchInput, setSearchInput }) => {
   return (
     <form className="searchbar">
       <input
+      placeholder="Search in tasks"
         type="text"
         className="searchbar__input"
         value={searchInput}

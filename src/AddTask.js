@@ -3,7 +3,11 @@ import { useState } from "react";
 const AddTask = ({ addTaskHandler }) => {
   const [inputValue, setInputValue] = useState("");
   return (
-    <form className="add-task">
+    <form className="add-task"  onSubmit={(e) => {
+      e.preventDefault();
+      inputValue && addTaskHandler(inputValue);
+      setInputValue("")
+    }}>
       <input
         type="text"
         className="add-task__input"
@@ -11,11 +15,7 @@ const AddTask = ({ addTaskHandler }) => {
         onChange={(e) => setInputValue(e.target.value)}
       ></input>
       <button
-        onClick={(e) => {
-          e.preventDefault();
-          inputValue && addTaskHandler(inputValue);
-          setInputValue("")
-        }}
+       
         type="submit"
         className="add-task__btn"
       ></button>

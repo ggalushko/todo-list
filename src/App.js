@@ -35,14 +35,22 @@ const App = () => {
       isDone: false,
     },
   ]);
+  const [searchInput, setSearchInput] = useState("");
 
   return (
     <>
       <Header />
       <main className="content">
         <Context.Provider value={tasks}>
-          <SearchBar />
-          <TaskList handleDelete={deleteTask} handleToggle={toggleTask} />
+          <SearchBar
+            searchInput={searchInput}
+            setSearchInput={setSearchInput}
+          />
+          <TaskList
+            handleDelete={deleteTask}
+            handleToggle={toggleTask}
+            searchInput={searchInput}
+          />
           <AddTask addTaskHandler={addTask} />
         </Context.Provider>
       </main>

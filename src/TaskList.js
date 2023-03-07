@@ -2,11 +2,15 @@ import { useContext } from "react";
 import Task from "./Task";
 import Context from "./Context";
 
-const TaskList = ({ handleDelete, handleToggle }) => {
+const TaskList = ({ handleDelete, handleToggle, searchInput }) => {
   const tasks = useContext(Context);
-  return (
+  const searchedTasks = tasks.filter((task) =>
+    task.text.toLowerCase().includes(searchInput.toLowerCase())
+  );
+
+  return searchedTasks.length > 0 ? (
     <ul className="task-list">
-      {tasks.map((task) => (
+      {searchedTasks.map((task) => (
         <Task
           key={task.id}
           task={task}
@@ -15,6 +19,8 @@ const TaskList = ({ handleDelete, handleToggle }) => {
         />
       ))}
     </ul>
+  ) : (
+    <p className="task-list__not-found"> Nothing found 😔 </p> 
   );
 };
 

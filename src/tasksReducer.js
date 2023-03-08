@@ -11,5 +11,12 @@ export default function tasksReducer(tasks, action) {
         task.id === action.id ? { ...task, isDone: !task.isDone } : task
       );
     }
+    case "edit": {
+      return tasks.map((task) =>
+        task.id === action.id ? { ...task, text: action.text } : task
+      );
+    }
+    default:
+      {throw new Error("Wrong argument for type of dispatch")}
   }
 }

@@ -7,19 +7,6 @@ import tasksReducer from "./tasksReducer.js";
 import Context from "./Context.js";
 
 const App = () => {
-  function deleteTask(task) {
-    dispatch({ type: "delete", id: task.id });
-  }
-
-  function addTask(text) {
-    dispatch({ type: "add", id: newTaskId, text: text });
-    setNewTaskId(newTaskId + 1);
-  }
-
-  function toggleTask(task) {
-    dispatch({ type: "toggle", id: task.id });
-  }
-
   const [newTaskId, setNewTaskId] = useState(4);
   const [tasks, dispatch] = useReducer(tasksReducer, [
     {
@@ -47,6 +34,7 @@ const App = () => {
             setSearchInput={setSearchInput}
           />
           <TaskList
+            handleEdit={editTask}
             handleDelete={deleteTask}
             handleToggle={toggleTask}
             searchInput={searchInput}
@@ -56,6 +44,23 @@ const App = () => {
       </main>
     </>
   );
+
+  function deleteTask(task) {
+    dispatch({ type: "delete", id: task.id });
+  }
+
+  function addTask(text) {
+    dispatch({ type: "add", id: newTaskId, text: text });
+    setNewTaskId(newTaskId + 1);
+  }
+
+  function toggleTask(task) {
+    dispatch({ type: "toggle", id: task.id });
+  }
+
+  function editTask(task, text) {
+    dispatch({ type: "edit", id: task.id, text: text });
+  }
 };
 
 export default App;

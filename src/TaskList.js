@@ -2,7 +2,7 @@ import { useContext } from "react";
 import Task from "./Task";
 import Context from "./Context";
 
-const TaskList = ({ handleDelete, handleToggle, searchInput }) => {
+const TaskList = ({ handleDelete, handleToggle, searchInput, handleEdit }) => {
   const tasks = useContext(Context);
   const searchedTasks = tasks.filter((task) =>
     task.text.toLowerCase().includes(searchInput.toLowerCase())
@@ -11,7 +11,7 @@ const TaskList = ({ handleDelete, handleToggle, searchInput }) => {
   if (tasks.length === 0)
     return (
       <p className="task-list__not-found">
-        You don't any tasks <br></br>Click the plus button below to add one
+        You don't have any tasks <br></br>Click the plus button below to add one
       </p>
     );
 
@@ -23,6 +23,7 @@ const TaskList = ({ handleDelete, handleToggle, searchInput }) => {
           task={task}
           handleDelete={handleDelete}
           handleToggle={handleToggle}
+          handleEdit={handleEdit}
         />
       ))}
     </ul>

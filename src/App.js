@@ -11,14 +11,14 @@ const App = () => {
   const [tasks, dispatch] = useReducer(tasksReducer, [
     {
       id: 0,
-      text: "Go to the gym Go to the gym Go to the gyGo to the gymGo to the gymGo to the gymGo to the gymm GGo to the gymo to the gym Go to the gymGo to the gymGo to the gymGo to the gymGo to the gymGo to the gym",
+      text: "Go to the gym",
       isDone: false,
     },
     { id: 1, text: "Play the videogames", isDone: false },
     { id: 2, text: "Walk the dog", isDone: false },
     {
       id: 3,
-      text: "Read the book by Hunter Stockton Thompson about the American Dream",
+      text: "Do the chemistry project",
       isDone: false,
     },
   ]);

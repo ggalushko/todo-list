@@ -37,7 +37,7 @@ const Task = ({ task, handleDelete, handleToggle, handleEdit }) => {
       )}
       <button
         type="button"
-        className="task-list_edit-btn"
+        className={task.isDone? "task-list__edit-btn task-list__edit-btn_hidden" : "task-list__edit-btn "}
         onClick={() => setInEditMode(!inEditMode)}
       ></button>
       <button

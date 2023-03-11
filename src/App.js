@@ -5,6 +5,7 @@ import SearchBar from "./SearchBar.js";
 import TaskList from "./TaskList.js";
 import tasksReducer from "./tasksReducer.js";
 import Context from "./Context.js";
+import TasksAmount from "./TasksAmount.js";
 
 const App = () => {
   const [newTaskId, setNewTaskId] = useState(4);
@@ -33,6 +34,7 @@ const App = () => {
             searchInput={searchInput}
             setSearchInput={setSearchInput}
           />
+          <TasksAmount />
           <TaskList
             handleEdit={editTask}
             handleDelete={deleteTask}

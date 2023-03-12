@@ -3,19 +3,19 @@ import { useState } from "react";
 const Task = ({ task, handleDelete, handleToggle, handleEdit }) => {
   const [inEditMode, setInEditMode] = useState(false);
   const taskClass = task.isDone
-    ? "task-list__task task-list__task_done"
-    : "task-list__task";
+    ? "task task_done"
+    : "task";
   const taskTextClass = task.isDone
-    ? "task-list__text task-list__text_done"
-    : "task-list__text";
+    ? "task__text task__text_done"
+    : "task__text";
   const editBtnClass = task.isDone
-  ? "task-list__edit-btn task-list__edit-btn_hidden"
-  : "task-list__edit-btn"
+  ? "task__edit-btn task__edit-btn_hidden"
+  : "task__edit-btn"
 
   return (
     <li className={taskClass}>
       <input
-        className="task-list__checkbox"
+        className="task__checkbox"
         type="checkbox"
         onChange={() => {
           handleToggle(task);
@@ -27,7 +27,7 @@ const Task = ({ task, handleDelete, handleToggle, handleEdit }) => {
           onChange={(e) => {
             handleEdit(task, e.target.value);
           }}
-          className={"task-list__edit-textarea"}
+          className={"task__edit-textarea"}
           value={task.text}
         ></textarea>
       ) : (
@@ -36,13 +36,13 @@ const Task = ({ task, handleDelete, handleToggle, handleEdit }) => {
       <button
         type="button"
         className={
-          inEditMode? "task-list__edit-btn task-list__edit-btn_edit-mode" : editBtnClass
+          inEditMode? "task__edit-btn task__edit-btn_edit-mode" : editBtnClass
         }
         onClick={() => setInEditMode(!inEditMode)}
       ></button>
       <button
         type="reset"
-        className="task-list__delete-btn"
+        className="task__delete-btn"
         onClick={() => {
           handleDelete(task);
         }}

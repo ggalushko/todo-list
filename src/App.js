@@ -1,11 +1,11 @@
 import { useReducer, useState } from "react";
-import AddTask from "./AddTask.js";
-import Header from "./Header.js";
-import SearchBar from "./SearchBar.js";
-import TaskList from "./TaskList.js";
+import AddTask from "./components/AddTask.js";
+import Header from "./components/Header.js";
+import SearchBar from "./components/SearchBar.js";
+import TaskList from "./components/TaskList.js";
 import tasksReducer from "./tasksReducer.js";
 import Context from "./Context.js";
-import TasksAmount from "./TasksAmount.js";
+import TasksAmount from "./components/TasksAmount.js";
 
 const App = () => {
   const [newTaskId, setNewTaskId] = useState(4);

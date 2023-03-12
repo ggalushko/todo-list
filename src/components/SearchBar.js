@@ -1,4 +1,4 @@
-import searchIcon from "./images/search.svg";
+import searchIcon from "../images/search.svg";
 
 const SearchBar = ({ searchInput, setSearchInput }) => {
   return (

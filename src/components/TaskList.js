@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import Task from "./Task";
-import Context from "./Context";
+import Context from "../Context";
 
 const TaskList = ({ handleDelete, handleToggle, searchInput, handleEdit }) => {
   const tasks = useContext(Context);
@@ -10,7 +10,7 @@ const TaskList = ({ handleDelete, handleToggle, searchInput, handleEdit }) => {
 
   if (tasks.length === 0)
     return (
-      <p className="task-list__not-found">
+      <p className="task-list__message">
         You don't have any tasks <br></br>Click the plus button below to add one
       </p>
     );
@@ -28,7 +28,7 @@ const TaskList = ({ handleDelete, handleToggle, searchInput, handleEdit }) => {
       ))}
     </ul>
   ) : (
-    <p className="task-list__not-found"> Nothing found 😔 </p>
+    <p className="task-list__message"> Nothing found 😔 </p>
   );
 };
 

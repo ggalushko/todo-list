@@ -17,7 +17,7 @@ const AddTask = ({ addTaskHandler }) => {
       <input
       placeholder="Enter task text"
         type="text"
-        className={inputIsHidden? "add-task__input visible" : "add-task__input"}
+        className={inputIsHidden? "add-task__input add-task__input_visible" : "add-task__input"}
         value={inputValue}
         onChange={(e) => setInputValue(e.target.value)}
       ></input>

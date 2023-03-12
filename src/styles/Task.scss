@@ -1,0 +1,93 @@
+@use "btn.scss";
+
+.task {
+  display: flex;
+  gap: 25px;
+  transition: opacity 0.6s;
+  &_done {
+    opacity: 0.5;
+  }
+
+  &__text {
+    font-size: 32px;
+    margin: 0;
+    line-height: 1.25;
+    &_done {
+      text-decoration: line-through;
+    }
+  }
+
+  &__checkbox {
+    appearance: none;
+    flex-shrink: 0;
+    border: 3px solid #15cb08;
+    border-radius: 10%;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    margin: 0;
+    &::before {
+      cursor: pointer;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 45px;
+      height: 45px;
+      border-radius: 10%;
+      background-color: #22b83ba5;
+      background-size: contain;
+    }
+    &:checked::before {
+      background-image: url("https://cdn-icons-png.flaticon.com/512/1634/1634264.png");
+    }
+  }
+
+  &__delete-btn {
+    @extend .btn;
+    background-image: url("../images/trash.svg");
+    background-size: contain;
+    background-color: transparent;
+    border: none;
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    cursor: pointer;
+  }
+
+  &__edit-btn {
+    @extend .btn;
+    margin-left: auto;
+    margin-right: 0;
+    flex-shrink: 0;
+    background-image: url("../images/edit.svg");
+    background-color: transparent;
+    background-size: contain;
+    width: 30px;
+    border: none;
+    cursor: pointer;
+    height: 30px;
+    &_edit-mode {
+      background-image: url("../images/tick.svg");
+    }
+    &_hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+
+  &__edit-textarea {
+    font-family: "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+      "Droid Sans", "Helvetica Neue", sans-serif;
+    margin: 0;
+    font-size: 32px;
+    width: 100%;
+    border: 1px solid #f0f8ff33;
+    background-color: transparent;
+    color: aliceblue;
+    resize: none;
+    &:focus {
+      outline: none;
+    }
+  }
+}

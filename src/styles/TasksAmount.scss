@@ -1,0 +1,17 @@
+.tasks-amount {
+  margin: 20px auto 0 auto;
+  text-align: center;
+  font-size: 25px;
+  width: fit-content;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: rgb(4, 34, 116);
+  }
+}

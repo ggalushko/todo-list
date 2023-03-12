@@ -1,0 +1,18 @@
+@import url("../src/styles/content.scss");
+@import url("../src/styles/Header.scss");
+@import url("../src/styles/AddTask.scss");
+@import url("../src/styles/SearchBar.scss");
+@import url("../src/styles/Task.scss");
+@import url("../src/styles/TaskList.scss");
+@import url("../src/styles/TasksAmount.scss");
+
+body {
+  margin: 0;
+  font-family: "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: linear-gradient(180deg, #2929a2 -65%, #2983e2 110%);
+  color: rgb(255, 255, 255);
+}
+

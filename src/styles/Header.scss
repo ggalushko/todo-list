@@ -1,0 +1,22 @@
+.header {
+  display: flex;
+  justify-content: flex-start;
+  padding: 0 10%;
+  gap: 10%;
+  background-color: #042274;
+  align-items: center;
+  box-shadow: 0px 0px 10px 8px rgba(45, 92, 245, 0.651);
+
+  &__logo {
+    width: 80px;
+    height: 80px;
+    background-position: center;
+    background-size: contain;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 40px;
+    margin: 0;
+  }
+}

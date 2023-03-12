@@ -1,0 +1,29 @@
+.searchbar {
+  display: flex;
+  place-items: center;
+  background-color: rgb(44, 118, 255);
+
+  &__input {
+    height: 50px;
+    padding: 5px;
+    font-size: 32px;
+    background-color: rgb(44, 118, 255);
+    border: none;
+    color: white;
+    width: 100%;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__icon {
+    opacity: 0.3;
+    border: none;
+    width: 30px;
+    color: white;
+    height: 30px;
+    padding: 10px;
+    flex-shrink: 0;
+    margin-left: 10px;
+  }
+}

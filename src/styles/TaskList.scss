@@ -1,0 +1,14 @@
+.task-list {
+  margin: 30px auto;
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+
+  &__message {
+    font-size: 32px;
+    margin: 40px auto;
+    text-align: center;
+  }
+}

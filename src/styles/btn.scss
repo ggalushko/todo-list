@@ -1,0 +1,6 @@
+.btn {
+  transition: scale 0.3s, opacity 0.4s;
+  &:hover {
+    scale: 1.2;
+  }
+}

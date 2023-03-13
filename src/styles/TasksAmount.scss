@@ -3,15 +3,27 @@
   text-align: center;
   font-size: 25px;
   width: fit-content;
-  position: relative;
+}
 
-  &::after {
-    position: absolute;
-    content: "";
-    bottom: -5px;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background-color: rgb(4, 34, 116);
+.line-container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.progress-line {
+  height: 5px;
+  width: 25px;
+
+  &_done {
+    height: 5px;
+    background-color: #15cb08;
+    width: 25px;
+  }
+
+  &_not-done {
+    height: 5px;
+    background-color: #ffffff;
+    width: 25px;
   }
 }

@@ -12,6 +12,7 @@
     font-size: 32px;
     margin: 0;
     line-height: 1.25;
+    word-break: break-all;
     &_done {
       text-decoration: line-through;
     }

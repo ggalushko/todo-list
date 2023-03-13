@@ -1,4 +1,5 @@
 import { useReducer, useState } from "react";
+import { initialTasks } from "./initialTasks.js";
 import AddTask from "./components/AddTask.js";
 import Header from "./components/Header.js";
 import SearchBar from "./components/SearchBar.js";
@@ -9,20 +10,7 @@ import TasksAmount from "./components/TasksAmount.js";
 
 const App = () => {
   const [newTaskId, setNewTaskId] = useState(4);
-  const [tasks, dispatch] = useReducer(tasksReducer, [
-    {
-      id: 0,
-      text: "Go to the gym",
-      isDone: false,
-    },
-    { id: 1, text: "Play the videogames", isDone: false },
-    { id: 2, text: "Walk the dog", isDone: false },
-    {
-      id: 3,
-      text: "Do the chemistry project",
-      isDone: false,
-    },
-  ]);
+  const [tasks, dispatch] = useReducer(tasksReducer, initialTasks);
   const [searchInput, setSearchInput] = useState("");
 
   return (

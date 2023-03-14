@@ -1,22 +1,40 @@
+@use "./variables.scss";
+
 .header {
   display: flex;
   justify-content: flex-start;
-  padding: 0 10%;
+  padding: 1% 10%;
   gap: 10%;
   background-color: #042274;
   align-items: center;
-  box-shadow: 0px 0px 10px 8px rgba(45, 92, 245, 0.651);
+  box-shadow: 0px 0px 10px 8px #2d5cf5a6;
 
   &__logo {
     width: 80px;
     height: 80px;
     background-position: center;
     background-size: contain;
+
+    @media (max-width: variables.$screen-width-m) {
+      width: 50px;
+      height: 50px;
+    }
+    @media (max-width: variables.$screen-width-s) {
+      width: 30px;
+      height: 30px;
+    }
   }
 
   &__title {
     font-weight: 600;
     font-size: 40px;
     margin: 0;
+
+    @media (max-width: variables.$screen-width-m) {
+      font-size: variables.$font-size-xl;
+    }
+    @media (max-width: variables.$screen-width-s) {
+      font-size: variables.$font-size-m;
+    }
   }
 }

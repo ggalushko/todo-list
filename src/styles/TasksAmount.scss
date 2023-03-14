@@ -1,8 +1,16 @@
+@use "variables.scss";
+
 .tasks-amount {
   margin: 20px auto 0 auto;
   text-align: center;
-  font-size: 25px;
+  font-size: variables.$font-size-l;
   width: fit-content;
+  @media (max-width: variables.$screen-width-m) {
+    font-size: variables.$font-size-m;
+  }
+  @media (max-width: variables.$screen-width-s) {
+    font-size: variables.$font-size-s;
+  }
 }
 
 .line-container {
@@ -12,18 +20,15 @@
 }
 
 .progress-line {
-  height: 5px;
-  width: 25px;
-
   &_done {
-    height: 5px;
-    background-color: #15cb08;
-    width: 25px;
+    height: 3px;
+    background-color: variables.$accent-clr;
+    width: 20px;
   }
 
   &_not-done {
-    height: 5px;
-    background-color: #ffffff;
-    width: 25px;
+    height: 3px;
+    background-color: variables.$font-clr;
+    width: 20px;
   }
 }

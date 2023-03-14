@@ -1,10 +1,10 @@
-@import url("../src/styles/content.scss");
-@import url("../src/styles/Header.scss");
-@import url("../src/styles/AddTask.scss");
-@import url("../src/styles/SearchBar.scss");
-@import url("../src/styles/Task.scss");
-@import url("../src/styles/TaskList.scss");
-@import url("../src/styles/TasksAmount.scss");
+@use "./src/styles/content.scss";
+@use "./src/styles/Header.scss";
+@use "./src/styles/AddTask.scss";
+@use "./src/styles/SearchBar.scss";
+@use "./src/styles/Task.scss";
+@use "./src/styles/TaskList.scss";
+@use "./src/styles/TasksAmount.scss";
 
 body {
   margin: 0;

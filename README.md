@@ -17,10 +17,11 @@
 
 ## React
 
-Используются основные хуки: 
+Используются хуки: 
 1.  UseState
 2.  UseReducer
 3.  UseContext
+4.  UseEffect
 
 ## SCSS
 

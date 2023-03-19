@@ -1,4 +1,4 @@
-import { useReducer, useState } from "react";
+import { useEffect, useReducer, useState } from "react";
 import { initialTasks } from "./initialTasks.js";
 import AddTask from "./components/AddTask.js";
 import Header from "./components/Header.js";
@@ -10,9 +10,15 @@ import TasksAmount from "./components/TasksAmount.js";
 
 const App = () => {
   const [newTaskId, setNewTaskId] = useState(4);
-  const [tasks, dispatch] = useReducer(tasksReducer, initialTasks);
+  const [tasks, dispatch] = useReducer(
+    tasksReducer,
+    JSON.parse(localStorage.getItem("tasks")) || initialTasks
+  );
   const [searchInput, setSearchInput] = useState("");
-
+  useEffect(
+    () => localStorage.setItem("tasks", JSON.stringify(tasks)),
+    [tasks]
+  );
   return (
     <>
       <Header />

@@ -15,10 +15,12 @@ const App = () => {
     JSON.parse(localStorage.getItem("tasks")) || initialTasks
   );
   const [searchInput, setSearchInput] = useState("");
+
   useEffect(
     () => localStorage.setItem("tasks", JSON.stringify(tasks)),
     [tasks]
   );
+  
   return (
     <>
       <Header />

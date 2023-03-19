@@ -21,6 +21,7 @@ const Task = ({ task, handleDelete, handleToggle, handleEdit }) => {
           handleToggle(task);
           setInEditMode(false);
         }}
+        checked={task.isDone}
       ></input>
       {inEditMode ? (
         <textarea

@@ -4,7 +4,7 @@
 
 Список задач
 
-[Посмотреть сайт можно здесь](https://ggalushko.github.io/todo-list/)
+[Посмотреть можно здесь](https://ggalushko.github.io/todo-list/)
 
 # Что реализовано
 

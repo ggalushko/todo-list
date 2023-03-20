@@ -68,11 +68,7 @@
   &__delete-btn {
     @extend .btn;
     background-image: url("../images/trash.svg");
-    background-size: contain;
-    background-color: transparent;
     border: none;
-    width: 30px;
-    height: 30px;
     flex-shrink: 0;
     cursor: pointer;
     @media (max-width: variables.$screen-width-s) {
@@ -87,12 +83,8 @@
     margin-right: 0;
     flex-shrink: 0;
     background-image: url("../images/edit.svg");
-    background-color: transparent;
-    background-size: contain;
-    width: 30px;
     border: none;
     cursor: pointer;
-    height: 30px;
 
     @media (max-width: variables.$screen-width-s) {
       width: 17px;

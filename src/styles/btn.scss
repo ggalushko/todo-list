@@ -1,5 +1,11 @@
 .btn {
   transition: scale 0.3s, opacity 0.4s;
+  background-size: contain;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 30px;
+  height: 30px;
   &:hover {
     scale: 1.2;
   }

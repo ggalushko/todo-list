@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import Context from "../Context";
+import Context from "../utils/Context.js";
 
 const TasksAmount = () => {
   const tasksContext = useContext(Context);

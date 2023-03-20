@@ -1,12 +1,12 @@
 import { useEffect, useReducer, useState } from "react";
-import { initialTasks } from "./initialTasks.js";
-import AddTask from "./components/AddTask.js";
-import Header from "./components/Header.js";
-import SearchBar from "./components/SearchBar.js";
-import TaskList from "./components/TaskList.js";
-import tasksReducer from "./tasksReducer.js";
-import Context from "./Context.js";
-import TasksAmount from "./components/TasksAmount.js";
+import { initialTasks } from "../data/initialTasks.js";
+import AddTask from "./AddTask.js";
+import Header from "./Header.js";
+import SearchBar from "./SearchBar.js";
+import TaskList from "./TaskList.js";
+import tasksReducer from "../utils/tasksReducer.js";
+import Context from "../utils/Context.js";
+import TasksAmount from "./TasksAmount.js";
 
 const App = () => {
   const [newTaskId, setNewTaskId] = useState(4);

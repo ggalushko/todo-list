@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import Task from "./Task";
-import Context from "../Context";
+import Context from "../utils/Context.js";
 
 const TaskList = ({ handleDelete, handleToggle, searchInput, handleEdit }) => {
   const tasks = useContext(Context);

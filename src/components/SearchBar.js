@@ -2,7 +2,12 @@ import searchIcon from "../images/search.svg";
 
 const SearchBar = ({ searchInput, setSearchInput }) => {
   return (
-    <form className="searchbar">
+    <form
+      className="searchbar"
+      onSubmit={(e) => {
+        e.preventDefault();
+      }}
+    >
       <input
         placeholder="Search in tasks"
         type="text"

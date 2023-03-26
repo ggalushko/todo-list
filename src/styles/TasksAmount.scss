@@ -14,21 +14,17 @@
 }
 
 .line-container {
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
+  display: grid;
 }
 
 .progress-line {
   &_done {
-    height: 3px;
+    height: 5px;
     background-color: variables.$accent-clr;
-    width: 20px;
   }
 
   &_not-done {
-    height: 3px;
+    height: 5px;
     background-color: variables.$font-clr;
-    width: 20px;
   }
 }

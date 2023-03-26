@@ -7,6 +7,9 @@ const TasksAmount = () => {
   const completeTasksNumber = tasksContext.filter((task) => task.isDone).length;
   const lineDone = new Array(completeTasksNumber).fill();
   const lineNotDone = new Array(totalTasksNumber - completeTasksNumber).fill();
+  const progressLineStyle = {
+    gridTemplateColumns: `repeat(${totalTasksNumber}, 1fr)`,
+  };
   let nextId = 0;
 
   if (totalTasksNumber) {
@@ -16,7 +19,7 @@ const TasksAmount = () => {
           {completeTasksNumber} out of {totalTasksNumber}
         </p>
 
-        <div className="line-container">
+        <div className="line-container" style={progressLineStyle}>
           {lineDone.map(() => (
             <div key={nextId++} className="progress-line_done"></div>
           ))}

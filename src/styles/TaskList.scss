@@ -15,6 +15,7 @@
     font-size: 32px;
     margin: 40px auto;
     text-align: center;
+    color: black;
 
     @media (max-width: variables.$screen-width-m) {
       font-size: variables.$font-size-m;

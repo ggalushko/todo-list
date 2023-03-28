@@ -9,7 +9,7 @@ import Context from "../utils/Context.js";
 import TasksAmount from "./TasksAmount.js";
 
 const App = () => {
-  const [newTaskId, setNewTaskId] = useState(4);
+  const [newTaskId, setNewTaskId] = useState(0);
   const [tasks, dispatch] = useReducer(
     tasksReducer,
     JSON.parse(localStorage.getItem("tasks")) || initialTasks

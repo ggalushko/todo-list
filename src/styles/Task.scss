@@ -5,6 +5,18 @@
   display: flex;
   gap: 25px;
   transition: opacity 0.6s;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
   @media (max-width: variables.$screen-width-s) {
     gap: 10px;
   }
@@ -52,7 +64,7 @@
       left: 0;
       width: 45px;
       height: 45px;
-      border-radius: 10%;
+
       background-color: #22b83ba5;
       background-size: contain;
       @media (max-width: variables.$screen-width-s) {
@@ -101,14 +113,16 @@
   }
 
   &__edit-textarea {
-    font-family: "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+
+    font-family: "Rubik", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
       "Droid Sans", "Helvetica Neue", sans-serif;
     margin: 0;
+    height: fit-content;
     font-size: 32px;
     width: 100%;
     border: 1px solid #f0f8ff33;
     background-color: transparent;
-    color: variables.$font-clr;
+    color:black;;
     resize: none;
     @media (max-width: variables.$screen-width-m) {
       font-size: variables.$font-size-l;

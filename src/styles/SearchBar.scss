@@ -4,10 +4,12 @@
   display: flex;
   place-items: center;
   background-color: variables.$secondary-clr;
+  border-radius: 10px;
 
   &__input {
+    margin-left: 5px;
     padding-left: 5px;
-    font-size: 32px;
+    font-size: variables.$font-size-xl;
     background-color: variables.$secondary-clr;
     border: none;
     color: variables.$font-clr;

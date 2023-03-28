@@ -6,8 +6,8 @@
   place-content: center;
 
   &__input {
-    padding-top: 5px;
-    padding-bottom: 5px;
+    // padding-top: 5px;
+    // padding-bottom: 5px;
     padding-left: 10px;
     margin-right: 10px;
     opacity: 0;
@@ -23,7 +23,6 @@
     }
 
     &_visible {
-      height: 50px;
       width: 100%;
       opacity: 1;
       visibility: visible;
@@ -33,7 +32,6 @@
     }
     @media (max-width: variables.$screen-width-s) {
       font-size: variables.$font-size-s;
-      height: 20px;
       margin-right: 5px;
     }
   }

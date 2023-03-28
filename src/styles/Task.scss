@@ -64,7 +64,6 @@
       left: 0;
       width: 45px;
       height: 45px;
-
       background-color: #22b83ba5;
       background-size: contain;
       @media (max-width: variables.$screen-width-s) {
@@ -97,7 +96,6 @@
     background-image: url("../images/edit.svg");
     border: none;
     cursor: pointer;
-
     @media (max-width: variables.$screen-width-s) {
       width: 17px;
       height: 17px;
@@ -113,7 +111,6 @@
   }
 
   &__edit-textarea {
-
     font-family: "Rubik", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
       "Droid Sans", "Helvetica Neue", sans-serif;
     margin: 0;
@@ -130,7 +127,6 @@
     @media (max-width: variables.$screen-width-s) {
       font-size: variables.$font-size-s;
     }
-
     &:focus {
       outline: none;
     }

@@ -21,10 +21,16 @@ const TasksAmount = () => {
 
         <div className="line-container" style={progressLineStyle}>
           {lineDone.map(() => (
-            <div key={nextId++} className="progress-line_done"></div>
+            <div
+              key={nextId++}
+              className="progress-line progress-line__done"
+            ></div>
           ))}
           {lineNotDone.map(() => (
-            <div key={nextId++} className="progress-line_not-done"></div>
+            <div
+              key={nextId++}
+              className="progress-line progress-line__not-done"
+            ></div>
           ))}
         </div>
       </>

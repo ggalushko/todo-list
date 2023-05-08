@@ -2,6 +2,8 @@
 
 ## Обзор
 
+![project image](https://psv4.userapi.com/c235131/u499681540/docs/d26/38bf5b11bcbf/tl.jpg?extra=d8p8H8s4JY8oRQeitgloOisviE6I6wu2XxsLh4ZWQvu8HLjROs7pHY5BojcKcXn0W318O525goc7M4itF_3uwaWcFaO5vRA5LBbXQ1G38aqc2fv-xq-2tTix2GAfCrft-6IIp4aWM7GTPGREFOBPX9o)
+
 Список задач - классика учебных проектов на React.
 
 [Посмотреть и попробовать можно здесь](https://ggalushko.github.io/todo-list/)

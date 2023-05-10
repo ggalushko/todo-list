@@ -1,11 +1,10 @@
-@use "./variables.scss";
-
+@use "variables.scss" as *;
 .content {
   margin-top: 50px;
   padding: 0 12%;
   max-width: 1000px;
   margin: 50px auto;
-  @media (max-width: variables.$screen-width-s) {
+  @media (max-width: $screen-width-s) {
     margin-top: 20px;
     padding-left: 4%;
     padding-right: 4%;

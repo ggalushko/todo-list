@@ -5,7 +5,7 @@
 @use "./src/styles/Task.scss";
 @use "./src/styles/TaskList.scss";
 @use "./src/styles/TasksAmount.scss";
-@use "./variables.scss";
+@use "variables.scss" as *;
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap");
 
 body {
@@ -15,5 +15,5 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #f4f3ebac;
-  color: variables.$font-clr;
+  color: $font-clr;
 }

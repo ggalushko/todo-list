@@ -1,5 +1,5 @@
 @use "btn.scss";
-@use "variables.scss";
+@use "variables.scss" as *;
 
 .add-task {
   display: flex;
@@ -10,9 +10,9 @@
     margin-right: 10px;
     opacity: 0;
     width: 0;
-    font-size: variables.$font-size-xl;
-    background-color: variables.$secondary-clr;
-    color: variables.$font-clr;
+    font-size: $font-size-xl;
+    background-color: $secondary-clr;
+    color: $font-clr;
     transition: opacity 0.8s, width 0.6s;
     border: none;
     border-radius: 10px;
@@ -25,11 +25,11 @@
       opacity: 1;
       visibility: visible;
     }
-    @media (max-width: variables.$screen-width-m) {
-      font-size: variables.$font-size-l;
+    @media (max-width: $screen-width-m) {
+      font-size: $font-size-l;
     }
-    @media (max-width: variables.$screen-width-s) {
-      font-size: variables.$font-size-s;
+    @media (max-width: $screen-width-s) {
+      font-size: $font-size-s;
       margin-right: 5px;
     }
   }
@@ -43,7 +43,7 @@
     background-image: url("https://www.svgrepo.com/show/474943/plus.svg");
     cursor: pointer;
 
-    @media (max-width: variables.$screen-width-s) {
+    @media (max-width: $screen-width-s) {
       width: 30px;
       height: 30px;
     }

@@ -1,26 +1,30 @@
 import { useEffect, useReducer, useState } from "react";
 import { initialTasks } from "../data/initialTasks.js";
-import AddTask from "./AddTask.js";
-import Header from "./Header.js";
-import SearchBar from "./SearchBar.js";
-import TaskList from "./TaskList.js";
+import {
+  AddTask,
+  Header,
+  SearchBar,
+  TaskList,
+  TasksAmount,
+} from "../components";
+
 import tasksReducer from "../utils/tasksReducer.js";
 import Context from "../utils/Context.js";
-import TasksAmount from "./TasksAmount.js";
 
 const App = () => {
-  const [newTaskId, setNewTaskId] = useState(0);
+  const [newTaskId, setNewTaskId] = useState(
+    Number(localStorage.getItem("newTaskId")) || 0
+  );
   const [tasks, dispatch] = useReducer(
     tasksReducer,
     JSON.parse(localStorage.getItem("tasks")) || initialTasks
   );
   const [searchInput, setSearchInput] = useState("");
 
-  useEffect(
-    () => localStorage.setItem("tasks", JSON.stringify(tasks)),
-    [tasks]
-  );
-  
+  useEffect(() => {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+  }, [tasks]);
+
   return (
     <>
       <Header />
@@ -49,7 +53,8 @@ const App = () => {
 
   function addTask(text) {
     dispatch({ type: "add", id: newTaskId, text: text });
-    setNewTaskId(newTaskId + 1);
+    localStorage.setItem("newTaskId", newTaskId + 1);
+    setNewTaskId(Number(localStorage.getItem("newTaskId")));
   }
 
   function toggleTask(task) {

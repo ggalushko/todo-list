@@ -1,8 +1,8 @@
 import { useState } from "react";
 
-const AddTask = ({ addTaskHandler }) => {
+export const AddTask = ({ addTaskHandler }) => {
   const [inputValue, setInputValue] = useState("");
-  const [inputIsHidden, setInputIsHidden] = useState(false)
+  const [inputIsHidden, setInputIsHidden] = useState(false);
 
   return (
     <form
@@ -11,13 +11,17 @@ const AddTask = ({ addTaskHandler }) => {
         e.preventDefault();
         inputValue && addTaskHandler(inputValue);
         setInputValue("");
-        setInputIsHidden(!inputIsHidden)
+        setInputIsHidden(!inputIsHidden);
       }}
     >
       <input
-      placeholder="Enter task text"
+        placeholder="Enter task text"
         type="text"
-        className={inputIsHidden? "add-task__input add-task__input_visible" : "add-task__input"}
+        className={
+          inputIsHidden
+            ? "add-task__input add-task__input_visible"
+            : "add-task__input"
+        }
         value={inputValue}
         onChange={(e) => setInputValue(e.target.value)}
       ></input>
@@ -25,5 +29,3 @@ const AddTask = ({ addTaskHandler }) => {
     </form>
   );
 };
-
-export default AddTask;

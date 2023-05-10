@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import Context from "../utils/Context.js";
 
-const TasksAmount = () => {
+export const TasksAmount = () => {
   const tasksContext = useContext(Context);
   const totalTasksNumber = tasksContext.length;
   const completeTasksNumber = tasksContext.filter((task) => task.isDone).length;
@@ -37,5 +37,3 @@ const TasksAmount = () => {
     );
   }
 };
-
-export default TasksAmount;

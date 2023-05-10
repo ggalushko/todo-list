@@ -1,6 +1,6 @@
 import searchIcon from "../images/search.svg";
 
-const SearchBar = ({ searchInput, setSearchInput }) => {
+export const SearchBar = ({ searchInput, setSearchInput }) => {
   return (
     <form
       className="searchbar"
@@ -19,5 +19,3 @@ const SearchBar = ({ searchInput, setSearchInput }) => {
     </form>
   );
 };
-
-export default SearchBar;
